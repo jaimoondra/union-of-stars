@@ -1,0 +1,11 @@
+---
+instance_type: "MQLib"
+sparsification:
+  - number_of_variants: 2
+  - q_values: [0.2, 0.5]         # Can also replace by epsilon_values, or frac_edges_values
+  - seeds: [0, 0]                      # Optional
+decomposition:
+  - number_of_variants: 3
+  - epsilon_values: [0.2, 1.0, 5.0]
+  - types: ['exponential', 'best', 'none']
+save_location: "data/MQLib_experiment_results"

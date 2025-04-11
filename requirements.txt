@@ -1,0 +1,9 @@
+gurobipy~=11.0.2
+networkx~=3.2.1
+numpy~=1.26.4
+scikit-learn~=1.5.1
+boto~=2.49.0
+boto3~=1.37.32
+pandas~=2.2.2
+tqdm~=4.66.5
+matplotlib~=3.9.0

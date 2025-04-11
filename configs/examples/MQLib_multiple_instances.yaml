@@ -1,0 +1,18 @@
+---
+instance_type: "MQLib"
+weighted_only: true
+min_vertices: 5
+max_vertices: 10
+min_edges: 10
+max_edges: 40
+min_sparsity: 2
+time_limit: 30
+sparsification:
+  - number_of_variants: 5
+  - q_values: [0.2, 0.5, 0.8, 1.0, 2.0]         # Can also replace by epsilon_values, or frac_edges_values
+  - seeds: [0, 0, 0, 0, 0]                      # Optional
+decomposition:
+  - number_of_variants: 15
+  - epsilon_values: [0.0, 0.1, 0.25, 0.5, 0.75, 1.0, 2.0, 5.0, 0.1, 0.25, 0.5, 0.75, 1.0, 2.0, 5.0]
+  - types: ['none', 'exponential', 'exponential', 'exponential', 'exponential', 'exponential', 'exponential', 'exponential', 'binary', 'binary', 'binary', 'binary', 'binary', 'binary', 'binary']
+save_location: "data/MQLib_experiment_results"
