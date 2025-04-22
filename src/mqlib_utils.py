@@ -16,7 +16,7 @@ from typing import Optional
 from tqdm import tqdm
 
 
-data_folder = 'data'
+data_folder = '../data'
 metadata_df = pd.read_csv(f'{data_folder}/MQLIb_instances_metadata.csv', index_col='Instance')
 
 
