@@ -106,6 +106,7 @@ class MQLibInstance:
         if location is None:
             location = os.path.join(data_folder, 'MQLib_instances')
         filepath = os.path.join(location, self.instance_name + '.zip')
+        os.makedirs(location, exist_ok=True)
 
         s3 = boto3.client("s3", config=Config(signature_version=UNSIGNED))
         bucket_name = "mqlibinstances"
