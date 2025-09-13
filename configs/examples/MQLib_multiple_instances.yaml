@@ -1,18 +1,18 @@
 ---
 instance_type: "MQLib"
-weighted_only: true
-min_vertices: 5
-max_vertices: 10
-min_edges: 10
-max_edges: 40
-min_sparsity: 2
-time_limit: 30
+weighted_only: true                             # If true, only weighted graphs are considered
+min_vertices: 50                                # Minimum number of vertices in the graph
+max_vertices: 199                               # Maximum number of vertices in the graph
+min_edges: 100                                  # Minimum number of edges in the graph
+max_edges: 1999                                 # Maximum number of edges in the graph
+min_sparsity: 2                                 # Minimum sparsity of the graph (edges/vertices)
+time_limit: 3000                                # in seconds
 sparsification:
-  - number_of_variants: 5
+  - number_of_variants: 5                       # Number of variants to generate
   - q_values: [0.2, 0.5, 0.8, 1.0, 2.0]         # Can also replace by epsilon_values, or frac_edges_values
   - seeds: [0, 0, 0, 0, 0]                      # Optional
 decomposition:
-  - number_of_variants: 15
+  - number_of_variants: 15                      # Number of variants to generate
   - epsilon_values: [0.0, 0.1, 0.25, 0.5, 0.75, 1.0, 2.0, 5.0, 0.1, 0.25, 0.5, 0.75, 1.0, 2.0, 5.0]
   - types: ['none', 'exponential', 'exponential', 'exponential', 'exponential', 'exponential', 'exponential', 'exponential', 'binary', 'binary', 'binary', 'binary', 'binary', 'binary', 'binary']
-save_location: "data/MQLib_experiment_results"
+save_location: "data/MQLib_experiment_results"  # Location to save the results for the experiment

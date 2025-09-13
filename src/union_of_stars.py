@@ -342,7 +342,6 @@ class SparseUnionOfStars(UnionOfStars):
         logging.info('Sparsifying the graph')
 
         if self.epsilon_sparsification == 0.0:
-            print('Here!')
             H = self.graph
         else:
             H = graph_sparsification_by_effective_resistances(
